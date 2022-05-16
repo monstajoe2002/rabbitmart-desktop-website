@@ -6,7 +6,7 @@ const Navbar = () => {
                 <a href="/">Home</a>
                 <a href="/my-cart">Cart</a>
                 <a href="/account">Account</a>
-                <input type="text" placeholder="balabizo"/>
+                <input type="text" placeholder="Search..."/>
                 
             </div>
         </nav>
