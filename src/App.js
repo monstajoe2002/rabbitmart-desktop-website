@@ -7,15 +7,14 @@ function App() {
 
     <div className="App">
       <Navbar />
-      <Card style={{ width: '18rem',borderRadius:'15px'}}>
+      <Card style={{ width: '12rem',height:'16rem',borderRadius:'15px',margin:'20px'}}>
         <Card.Img variant="top" src="image.jpg" />
         <Card.Body >
-          <Card.Title style={{ color: 'green' }}>Card Title</Card.Title>
+          <Card.Title style={{ color: 'green' }}>Coca Cola Can 300ml</Card.Title>
           <Card.Text style={{ color: 'green' }}>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
+            20.00 EGP
           </Card.Text>
-          <button class="button" >Go somewhere</button>
+          <button class="button">View Product</button>
         </Card.Body>
       </Card>
     </div>
