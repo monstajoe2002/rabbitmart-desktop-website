@@ -2,7 +2,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
  *{
    margin: 0;
-   font-family: "Poppins";
+   font-family: "Poppins",sans-serif;
    color: #DCFD51;
    
  }
@@ -33,9 +33,19 @@
    font-weight:600;
 
  }
+ .navbar input {
+   font-family:'Roboto',sans-serif;
+   margin-left: 16px;
+   text-decoration: none;
+   padding: 6px;
+   color: black;
+   font-weight: 600;
+
+ }
 
  .navbar a:hover {
    color: #DCFD51;
+   text-decoration: underline;
  }
  .navbar input {
    font-family: "Roboto",sans-serif;
