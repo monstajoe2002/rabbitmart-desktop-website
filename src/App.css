@@ -24,18 +24,18 @@
 }
 
 
-/* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 5px 0 0;
-}
 
-.view-all-button {
+/*Style the buttons*/
+.category-button {
   background-color: #124831;
   color: white;
-  height: 40px;
+  
   border-radius: 5px;
   box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
 }
 .img-fluid {
   width: 100%
 }
+
+
+

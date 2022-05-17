@@ -19,7 +19,9 @@ function App() {
         </Carousel>
       </Container>
       <h1 class="h1">Categories</h1>
-      <CategoryList/>
+      <Container>
+        <CategoryList />
+        </Container>
     </div>
 
   );
