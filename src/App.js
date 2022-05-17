@@ -1,22 +1,25 @@
 import './App.css';
 import Navbar from './Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card,Button} from "react-bootstrap"
+import {Container, Carousel } from "react-bootstrap"
+import CategoryList from './components/CategoryList';
 function App() {
   return (
 
     <div className="App">
       <Navbar />
-      <Card style={{ width: '12rem',height:'16rem',borderRadius:'15px',margin:'20px'}}>
-        <Card.Img variant="top" src="image.jpg" />
-        <Card.Body >
-          <Card.Title style={{ color: 'green' }}>Coca Cola Can 300ml</Card.Title>
-          <Card.Text style={{ color: 'green' }}>
-            20.00 EGP
-          </Card.Text>
-          <button class="button">View Product</button>
-        </Card.Body>
-      </Card>
+      <Container>
+        <Carousel>
+          <Carousel.Item interval={1000}>
+            <img className="img-fluid" src='https://thumbs.dreamstime.com/b/three-bottles-lipton-ice-tea-soft-drink-poznan-pol-jun-plastic-brand-sold-belonging-to-unilever-british-dutch-150243220.jpg'/>
+          </Carousel.Item>
+          <Carousel.Item interval={1000}>
+            <img className="img-fluid" src='https://insiteooh.com/storage/app/uploads/public/5dd/669/e55/5dd669e55228c181021042.jpg' />
+          </Carousel.Item>
+        </Carousel>
+      </Container>
+      <h1 class="h1">Categories</h1>
+      <CategoryList/>
     </div>
 
   );
