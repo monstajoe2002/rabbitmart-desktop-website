@@ -9,12 +9,17 @@ import Category from './components/Category';
 =======
 import CategoryList from './components/CategoryList';
 import Category from './components/Category'
+<<<<<<< HEAD
+>>>>>>> origin/youssef-amr
+=======
+import Offers from './components/Offers';
 >>>>>>> origin/youssef-amr
 function App() {
   return (
 
     <div className="App">
       <Navbar />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Offers />
 =======
@@ -28,6 +33,9 @@ function App() {
           </Carousel.Item>
         </Carousel>
       </Container>
+>>>>>>> origin/youssef-amr
+=======
+      <Offers/>
 >>>>>>> origin/youssef-amr
       <h1 class="h1">Categories</h1>
       <Container>
