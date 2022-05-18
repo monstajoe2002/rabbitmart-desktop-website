@@ -3,7 +3,7 @@ const Offers = () => {
     return ( <div>
         <Container>
             <Carousel>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     <img className="img-fluid" src='https://thumbs.dreamstime.com/b/three-bottles-lipton-ice-tea-soft-drink-poznan-pol-jun-plastic-brand-sold-belonging-to-unilever-british-dutch-150243220.jpg' />
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
