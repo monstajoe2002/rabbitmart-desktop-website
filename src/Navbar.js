@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, MenuItem } from '@mui/material';
+import { Form, FormControl, Container, Row } from 'react-bootstrap';
 import Button from '@mui/material/Button';
 import CategoryList from './components/CategoryList';
+
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -13,45 +14,33 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar">
-            <h1 class="h1">Rabbit</h1>
-            <div className="links">
-                <CategoryList />
-                <a href="/">Home</a>
-                <a href="/my-cart">Cart</a>
-                <a href="/account">Account</a>
-                <Button variant="contained"
-                    id="categories-button"
+            <Container className="links">
+                <h1 class="h1">Rabbit</h1>
 
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                    style={{ marginLeft: '10px', fontFamily: 'Poppins', backgroundColor: 'green', color: '#dbfc51' }}>
-                    Categories
+                <Row md="auto">
+                   
+                    <a href="/">Home</a>
+                    <a href="/my-cart">Cart</a>
+                    <a href="/account">Account</a>
+                    <CategoryList />
+                    <Form className="d-flex">
+                        <FormControl
+                            type="search"
+                            placeholder="Search"
 
-                </Button>
-                <Menu
-                    id="categories-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                >
-                    <div >
-                        <MenuItem onClick={handleClose} style={{ fontFamily: 'Poppins' }} >
-                            All
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} style={{ fontFamily: 'Poppins' }}>
-                            Meat, Fish & Poultry
-                        </MenuItem>
-                        <MenuItem onClick={handleClose} style={{ fontFamily: 'Poppins' }}>
-                            Dairy Products
-                        </MenuItem>
-                    </div>
-                </Menu>
-                <input type="text" placeholder="Search..." />
-                <CategoryList />
+                            aria-label="Search"
+                        />
 
-            </div>
+                        <Button style={{ color: 'white' }}>Search</Button>
+                    </Form>
+                </Row>
+            </Container>
+
+
+
+
         </nav>
+
     );
 }
 
