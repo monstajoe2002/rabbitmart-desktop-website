@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, MenuItem } from '@mui/material';
+import { Form, FormControl, Container, Row } from 'react-bootstrap';
 import Button from '@mui/material/Button';
 import CategoryList from './components/CategoryList';
 
@@ -14,19 +14,33 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar">
-            <h1 class="h1">Rabbit</h1>
-            <div className="links">
-                
-                <a href="/">Home</a>
-                <a href="/my-cart">Cart</a>
-                <a href="/account">Account</a>
-                
-                <input type="text" placeholder="Search..." />
-                <CategoryList/>
-                
-            </div>
+            <Container className="links">
+                <h1 class="h1">Rabbit</h1>
+
+                <Row md="auto">
+                   
+                    <a href="/">Home</a>
+                    <a href="/my-cart">Cart</a>
+                    <a href="/account">Account</a>
+                    <CategoryList />
+                    <Form className="d-flex">
+                        <FormControl
+                            type="search"
+                            placeholder="Search"
+
+                            aria-label="Search"
+                        />
+
+                        <Button style={{ color: 'white' }}>Search</Button>
+                    </Form>
+                </Row>
+            </Container>
+
+
+
+
         </nav>
-        
+
     );
 }
 
