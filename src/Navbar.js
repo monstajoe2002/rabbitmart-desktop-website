@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, MenuItem } from '@mui/material';
 import Button from '@mui/material/Button';
 import CategoryList from './components/CategoryList';
+
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -21,8 +22,8 @@ const Navbar = () => {
                 <a href="/account">Account</a>
                 
                 <input type="text" placeholder="Search..." />
-                <CategoryList />
-
+                <CategoryList/>
+                
             </div>
         </nav>
         

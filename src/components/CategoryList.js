@@ -1,45 +1,17 @@
 import {Button,Menu,MenuItem, ThemeProvider} from '@mui/material';
 import { createTheme } from '@mui/system';
 import React, { useState } from 'react';
+import { NavDropdown } from 'react-bootstrap';
 const CategoryList = () => {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    }
+    const categories=['All','Meat, Fish & Poultry', 'Dairy Products']
     return (  
         <div>
-            <Button variant="contained"
-                id="categories-button"
+            <NavDropdown title="Categories" id="basic-nav-dropdown">
+                {categories.map(category =>
+                    <NavDropdown.Item href="/category/all" style={{ fontWeight: '400', color: 'black' }}>{category}</NavDropdown.Item>
+                )}
 
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-                style={{ marginLeft: '10px', fontFamily: 'Poppins', backgroundColor: 'green', color: '#dbfc51' }}>
-                Categories
-
-            </Button>
-            <Menu
-                id="categories-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-            >
-                <div >
-                    <MenuItem onClick={handleClose} style={{ fontFamily: 'Poppins' }} >
-                        All
-                    </MenuItem>
-                    <MenuItem onClick={handleClose} style={{ fontFamily: 'Poppins' }}>
-                        Meat, Fish & Poultry
-                    </MenuItem>
-                    <MenuItem onClick={handleClose} style={{ fontFamily: 'Poppins' }}>
-                        Dairy Products
-                    </MenuItem>
-                </div>
-            </Menu>
+            </NavDropdown>
         </div>
     );
 }
