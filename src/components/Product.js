@@ -10,7 +10,7 @@ const Product = () => {
                 <Card.Text>
                     25.00 EGP
                 </Card.Text>
-                <Button variant="contained" style={{ backgroundColor:'#124831',position:'sticky'}}>View</Button>
+                <Button variant="contained" style={{ backgroundColor: '#124831', fontFamily: 'Poppins', color:'#dcfd51'}}>View</Button>
             </Card.Body>
         </Card>
     </div> 
