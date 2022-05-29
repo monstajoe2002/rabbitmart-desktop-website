@@ -21,7 +21,13 @@
   color: #DCFD51;
   font-weight: 900;
 }
-
+#brand{
+    color: #DCFD51;
+    font-weight: 900;
+}
+#brand a:hover{
+  color: #DCFD51;
+}
 .navbar .links {
   margin-left: auto;
 }
