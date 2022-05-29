@@ -1,7 +1,7 @@
 import { Card} from "react-bootstrap";
 import { Button } from "@mui/material";
 
-const Product = () => {
+const ProductCard = () => {
     return ( <div>
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="holder.js/100px180" />
@@ -17,4 +17,4 @@ const Product = () => {
     );
 }
  
-export default Product;
+export default ProductCard;
