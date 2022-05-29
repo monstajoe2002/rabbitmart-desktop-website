@@ -1,16 +1,47 @@
+import React, { useState } from 'react';
+import { Form, FormControl, Container, Row } from 'react-bootstrap';
+import Button from '@mui/material/Button';
+import CategoryList from './components/homepage/CategoryList';
+
 const Navbar = () => {
-    return ( 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    }
+    return (
         <nav className="navbar">
-            <h1 class="h1">Rabbit</h1>
-            <div className="links">
-                <a href="/">Home</a>
-                <a href="/my-cart">Cart</a>
-                <a href="/account">Account</a>
-                <input type="text" placeholder="Search..."/>
-                
-            </div>
+            <Container className="links">
+                <a href="" id="brand" class="h1">Rabbit</a>
+
+                <Row md="auto">
+                   
+                    <a href="/">Home</a>
+                    <a href="/my-cart">Cart</a>
+                    <a href="/account">Account</a>
+                    <CategoryList />
+                    <Form className="d-flex">
+                        <FormControl
+                            type="search"
+                            placeholder="Search"
+
+                            aria-label="Search"
+                        />
+
+                        <Button style={{ color: 'white' }}>Search</Button>
+                    </Form>
+                </Row>
+            </Container>
+
+
+
+
         </nav>
-     );
+
+    );
 }
- 
+
 export default Navbar;
