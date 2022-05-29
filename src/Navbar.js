@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, FormControl, Container, Row } from 'react-bootstrap';
 import Button from '@mui/material/Button';
-import CategoryList from './components/CategoryList';
+import CategoryList from './components/homepage/CategoryList';
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Container className="links">
-                <h1 class="h1">Rabbit</h1>
+                <a href="" id="brand" class="h1">Rabbit</a>
 
                 <Row md="auto">
                    

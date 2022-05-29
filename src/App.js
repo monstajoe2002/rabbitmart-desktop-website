@@ -1,8 +1,7 @@
 import Navbar from './Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Button} from "react-bootstrap"
-import Product from './components/Product';
-import ProductList from './components/ProductList';
+import ProductCardList from './components/homepage/ProductCardList';
 function App() {
   return (
 
@@ -12,7 +11,7 @@ function App() {
       
       <Container>
         <h1 id='heading'>Recommended</h1>
-        <ProductList/>
+        <ProductCardList/>
       </Container>
     
     </div>
