@@ -1,8 +1,8 @@
 
 const Category = () => {
     return ( 
-        <div>
-
+        <div classname="App">
+            <h1>Hello</h1>
         </div>
      );
 }

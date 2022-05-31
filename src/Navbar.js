@@ -15,11 +15,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Container className="links">
-                <a href="" id="brand" class="h1">Rabbit</a>
+                <a href="/" id="brand" class="h1">Rabbit</a>
 
                 <Row md="auto">
-                   
-                    <a href="/">Home</a>
                     <a href="/my-cart">Cart</a>
                     <a href="/account">Account</a>
                     <CategoryList />
