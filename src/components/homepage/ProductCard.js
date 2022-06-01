@@ -1,6 +1,6 @@
 import { Card} from "react-bootstrap";
 import { Button } from "@mui/material";
-
+import ShoppingCart from "../shopping_cart/Cart";
 const ProductCard = () => {
     return ( <div>
         <Card style={{ width: '15rem' }}>
@@ -10,7 +10,7 @@ const ProductCard = () => {
                 <Card.Text>
                     20.00 EGP
                 </Card.Text>
-                <Button variant="contained" style={{ backgroundColor: '#124831', fontFamily: 'Poppins', color:'#dcfd51'}}>View</Button>
+                <Button variant="contained" href="/product" style={{ backgroundColor: '#124831', fontFamily: 'Poppins', color:'#dcfd51'}}>View</Button>
             </Card.Body>
         </Card>
     </div> 
