@@ -20,11 +20,6 @@ const CategoryList = () => {
                 
                 
             </NavDropdown>
-            <BrowserRouter>
-                <Routes>
-                    <Route path={`/category/${category.toLowerCase()}`} element={<Category />} />
-                </Routes>
-            </BrowserRouter>
         </div>
     );
 }
