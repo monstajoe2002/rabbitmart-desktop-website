@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavDropdown } from 'react-bootstrap';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import App from '../../App';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Category from '../categories/Category';
 const CategoryList = () => {
     let category=''

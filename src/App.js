@@ -1,7 +1,5 @@
 import Navbar from './Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container,Button} from "react-bootstrap"
-import ProductCardList from './components/homepage/ProductCardList';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './components/homepage/Home';
 import ShoppingCart from './components/shopping_cart/Cart';
