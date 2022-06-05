@@ -3,8 +3,8 @@ import { Button } from "@mui/material";
 import ShoppingCart from "../shopping_cart/Cart";
 const ProductCard = () => {
     return ( <div>
-        <Card style={{ width: '15rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={{ width: '15rem',padding:'5px',margin:'5px' }}>
+            <Card.Img variant="top" src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png" />
             <Card.Body>
                 <Card.Title>Lamar Full Cream 500ml</Card.Title>
                 <Card.Text>
