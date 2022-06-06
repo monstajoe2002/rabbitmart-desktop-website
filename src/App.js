@@ -5,6 +5,7 @@ import Home from './components/homepage/Home';
 import ShoppingCart from './components/shopping_cart/Cart';
 import ProductPage from './components/product_page/Product';
 import './styles/index.css'
+import { v4 } from 'uuid'
 function App() {
   return (
 
@@ -18,7 +19,7 @@ function App() {
           <Route exact path="/my-cart">
             <ShoppingCart />
           </Route>
-          <Route exact path="/product/">
+          <Route exact path='/product'>
             <ProductPage />
           </Route>
         </Switch>
