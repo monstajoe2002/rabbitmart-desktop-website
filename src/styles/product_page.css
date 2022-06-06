@@ -31,3 +31,9 @@ color: #124831
     margin-right: auto;
     width: 35%;
 }
+.quantity{
+    text-align: right;
+    margin-right: auto;
+    position: static;
+    margin: 5px;
+}
