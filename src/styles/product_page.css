@@ -35,5 +35,7 @@ color: #124831
     text-align: right;
     margin-right: auto;
     position: static;
-    margin: 5px;
+    display: flex;
+    margin-top: 15px;
+   
 }
