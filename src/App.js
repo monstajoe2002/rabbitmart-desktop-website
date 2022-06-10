@@ -10,16 +10,15 @@ import { v4 } from 'uuid'
 const axios = require('axios')
 function App() {
   const [products, setProducts] = useState([]);
-  let productsList;
+  let productsList=[];
 
   useEffect(() => {
-
+    
     (async () => {
       const result = await axios.get('https://matrixbytes-products-microservice.vercel.app/api/products')
       productsList = result.data
-      setProducts(productsList);
+      setProducts(productsList);console.log(productsList)
     })();
-    console.log(products)
   }, []);
   return (
     
@@ -33,7 +32,7 @@ function App() {
           <Route exact path="/my-cart">
             <ShoppingCart />
           </Route>
-          <Route exact path='/product'>
+          <Route exact path={`/product/${products.map(product=>product.id)}`}>
             <ProductPage />
           </Route>
         </Switch>
