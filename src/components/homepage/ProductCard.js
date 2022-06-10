@@ -1,6 +1,4 @@
 import { Card} from "react-bootstrap";
-import { Button } from "@mui/material";
-import ShoppingCart from "../shopping_cart/Cart";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 const axios = require('axios')

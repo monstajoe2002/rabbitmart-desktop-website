@@ -1,5 +1,5 @@
 import '../../styles/product_page.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from '@mui/material';
 
 
