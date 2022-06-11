@@ -17,7 +17,7 @@ const ProductCard = (props) => {
     return ( <div>
         <Link to={`/product/${props.id}`} style={{color:'black',textDecoration:'none'}}>
             <Card style={{ width: '15rem', padding: '5px', margin: '5px' }}>
-                <Card.Img variant="top" src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png" />
+                <Card.Img variant="top" src={`${props.image}`} />
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>

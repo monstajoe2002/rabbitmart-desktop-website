@@ -11,11 +11,11 @@ const ProductCardList = () => {
         (async () => {
             const result = await axios.get('https://matrixbytes-products-microservice.vercel.app/api/products')
             productsList = result.data
-            setProducts(productsList);
+            setProducts(productsList); console.log(productsList)
         })();
     }, []);
     return ( <CardGroup>
-        {productsList.map(product => {<ProductCard id={product.id} name={product.name} price={product.price}/>})}
+        {products.map(product =>  {return<ProductCard id={product.id} name={product.name} price={product.price} image={product.image}/>})}
         
         
     </CardGroup> 

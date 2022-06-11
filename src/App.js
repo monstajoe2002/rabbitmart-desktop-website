@@ -6,7 +6,7 @@ import ShoppingCart from './components/shopping_cart/Cart';
 import { useEffect,useState } from "react";
 import ProductPage from './components/product_page/Product';
 import './styles/index.css'
-import { v4 } from 'uuid'
+import Category from './components/categories/Category';
 const axios = require('axios')
 function App() {
   const [products, setProducts] = useState([]);
@@ -17,7 +17,7 @@ function App() {
     (async () => {
       const result = await axios.get('https://matrixbytes-products-microservice.vercel.app/api/products')
       productsList = result.data
-      setProducts(productsList);console.log(productsList)
+      setProducts(productsList);
     })();
   }, []);
   return (
@@ -34,6 +34,9 @@ function App() {
           </Route>
           <Route exact path={`/product/${products.map(product=>product.id)}`}>
             <ProductPage />
+          </Route>
+          <Route exact path={`/product/${products.map(product => product.category)}`}>
+            <Category/>
           </Route>
         </Switch>
         
