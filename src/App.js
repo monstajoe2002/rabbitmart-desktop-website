@@ -11,7 +11,7 @@ const axios = require('axios')
 function App() {
   const [products, setProducts] = useState([]);
   let productsList=[];
-
+  let categories = [...new Set(products.map(product => product.category)).add('All')]
   useEffect(() => {
     
     (async () => {
@@ -35,9 +35,9 @@ function App() {
           <Route exact path={`/product/${products.map(product=>product.id)}`}>
             <ProductPage />
           </Route>
-          <Route exact path={`/product/${products.map(product => product.category)}`}>
-            <Category/>
-          </Route>
+          {categories.map(category =><Route exact path={`/category/${category.toLowerCase()}`}>
+            <Category title={category}/>
+          </Route>)}
         </Switch>
         
 

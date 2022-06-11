@@ -16,14 +16,14 @@ const CategoryList = () => {
             setProducts(productsList);
         })();
     }, []);
-    let category=''
-    const categories = [...new Set(products.map(product => product.category))]
+    
+    const categories = [...new Set(products.map(product => product.category)).add('All')]
     
     return (
         <div>
             <NavDropdown title="Categories" id="offcanvasNavbarDropdown-expand-sm">
                 {categories.map(category =>
-                    <a href={`/product/${products.map(product => product.category)}`} >
+                    <a>
                         <NavDropdown.Item href={`/category/${category.toLowerCase()}`} style={{ fontWeight: '400', color: 'black' }}>{category}</NavDropdown.Item>
                     </a>    
                         
