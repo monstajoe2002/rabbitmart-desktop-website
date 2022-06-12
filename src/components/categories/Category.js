@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import ProductCard from '../homepage/ProductCard';
+import { CardGroup } from "react-bootstrap";
 const axios = require('axios')
 const Category = (props) => {
     const [products, setProducts] = useState([]);
@@ -12,13 +14,20 @@ const Category = (props) => {
             setProducts(productsList);
         })();
     }, []);
-    return ( 
+    return (
         <div>
             <h1 id="heading">{props.title}</h1>
-            {products.filter(title=>title===props.title)}
-            
+            <CardGroup>
+                {products.map(product => {
+                    if (product.category ===props.title)
+                    return <ProductCard id={product.id} name={product.name} price={product.price} image={product.image} /> 
+                    if(props.title==='All')
+                        return <ProductCard id={product.id} name={product.name} price={product.price} image={product.image} />
+                    })}
+
+            </CardGroup>
         </div>
-     );
+    );
 }
- 
+
 export default Category;

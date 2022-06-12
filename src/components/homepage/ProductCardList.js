@@ -1,4 +1,4 @@
-import { CardGroup} from "react-bootstrap";
+import { CardGroup } from "react-bootstrap";
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 const axios = require('axios')
