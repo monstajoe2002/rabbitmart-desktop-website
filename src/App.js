@@ -1,27 +1,48 @@
 import Navbar from './Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container,Button} from "react-bootstrap"
-import ProductCardList from './components/homepage/ProductCardList';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './components/homepage/Home';
+import ShoppingCart from './components/shopping_cart/Cart';
+import { useEffect,useState } from "react";
+import ProductPage from './components/product_page/Product';
+import './styles/index.css'
+import Category from './components/categories/Category';
+const axios = require('axios')
 function App() {
-  return (
-
-    <div className="App">
-      <Navbar />
-      {/* <Offers/> */}
-      <Container>
-        <h1 id='heading'>Recommended</h1>
-        <ProductCardList/>
-        <h1 id='heading'>Offers of the Week!</h1>
-        <ProductCardList />
-        <h1 id='heading'>Champions Breakfast</h1>
-        <ProductCardList />
-        <h1 id='heading'>Clean & Shine!</h1>
-        <ProductCardList />
-        <h1 id='heading'>Rabbit's Picks</h1>
-        <ProductCardList />
-      </Container>
+  const [products, setProducts] = useState([]);
+  let productsList=[];
+  let categories = [...new Set(products.map(product => product.category)).add('All')]
+  useEffect(() => {
     
-    </div>
+    (async () => {
+      const result = await axios.get('https://matrixbytes-products-microservice.vercel.app/api/products')
+      productsList = result.data
+      setProducts(productsList);
+    })();
+  }, []);
+  return (
+    
+    <Router>
+      <div className="App">
+        <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+          <Route exact path="/my-cart">
+            <ShoppingCart />
+          </Route>
+          {products.map(product => <Route exact path={`/product/${product.id}`}>
+            <ProductPage />
+          </Route>)}
+          {categories.map(category =><Route exact path={`/category/${category.toLowerCase()}`}>
+            <Category title={category}/>
+          </Route>)}
+        </Switch>
+        
+
+      </div>
+    </Router>
 
   );
 }

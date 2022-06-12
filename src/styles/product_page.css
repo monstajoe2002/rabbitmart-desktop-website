@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+
+.product-info{
+    margin: 20px;
+    
+}
+#name{
+    width: 100%;
+    position: relative;
+    text-align: left;
+    justify-content: center;
+}
+#quantity {
+    
+    text-align: left;
+    opacity: 50%;
+}
+#price{
+text-align: right;
+font-weight: bold;
+position: sticky;
+color: #124831
+
+
+}
+#image{
+    display: block;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+.quantity{
+    text-align: right;
+    margin-right: auto;
+    position: static;
+    display: flex;
+    margin-top: 15px;
+   
+}

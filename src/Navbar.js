@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { Form, FormControl, Container, Row } from 'react-bootstrap';
 import Button from '@mui/material/Button';
 import CategoryList from './components/homepage/CategoryList';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <nav className="navbar">
             <Container className="links">
-                <a href="/" id="brand" class="h1">Rabbit</a>
+                <Link to="/" id="brand" class="h1">Rabbit</Link>
 
                 <Row md="auto">
-                    <a href="/my-cart">Cart</a>
+                    <Link to="/my-cart">Cart</Link>
 
                     <CategoryList />
                     <Form className="d-flex">
@@ -20,7 +21,7 @@ const Navbar = () => {
                             aria-label="Search"
                         />
 
-                        <Button style={{ color: 'white' }}>Search</Button>
+                        <Button style={{ backgroundColor:"#1b6e4b" ,color: 'white' }}>Search</Button>
                     </Form>
                 </Row>
             </Container>
