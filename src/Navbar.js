@@ -21,7 +21,7 @@ const Navbar = () => {
                             aria-label="Search"
                         />
 
-                        <Button style={{ color: 'white' }}>Search</Button>
+                        <Button style={{ backgroundColor:"#1b6e4b" ,color: 'white' }}>Search</Button>
                     </Form>
                 </Row>
             </Container>
