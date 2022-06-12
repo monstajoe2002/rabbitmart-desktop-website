@@ -32,9 +32,9 @@ function App() {
           <Route exact path="/my-cart">
             <ShoppingCart />
           </Route>
-          <Route exact path={`/product/${products.map(product=>product.id)}`}>
+          {products.map(product => <Route exact path={`/product/${product.id}`}>
             <ProductPage />
-          </Route>
+          </Route>)}
           {categories.map(category =><Route exact path={`/category/${category.toLowerCase()}`}>
             <Category title={category}/>
           </Route>)}
