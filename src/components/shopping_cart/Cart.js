@@ -16,18 +16,18 @@ cart.map(product => totalPrice+=product.price)
             </thead>
                 
                 <tbody>
-                    <tr>
+                    {cart.map(product =><tr>
                         <td>
-                            {cart.map(product => product.name)}
+                             {product.name}
                         </td>
                         <td>
-                            {cart.map(product => product.price)}
+                            { product.price}
                         </td>
                         <td>
-                            {cart.map(product => product.quantity)}
+                            {product.quantity}
                         </td>
                         
-                    </tr>
+                    </tr>)}
                 <tr>
                     <td>Total price: {totalPrice} EGP</td>
                     <td />
@@ -36,7 +36,7 @@ cart.map(product => totalPrice+=product.price)
                 </tbody>
 
         </Table>
-        <Button variant="contained"  style={{ backgroundColor: "#124831", fontFamily: 'Poppins', color: "#dcfd51" }}>Checkout</Button>
+        <Button variant="contained" href="http://localhost:4000" style={{ backgroundColor: "#124831", fontFamily: 'Poppins', color: "#dcfd51" }}>Checkout</Button>
     </div>);
 }
 
